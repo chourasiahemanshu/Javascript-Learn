@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>thenewboston</title>
+    <script >
+        var obj=[
+                    {
+                    "firstname":"Charles",
+                    "lastname":"Babage",
+                    "address":"USA",
+                    "gender":"male"
+                    },
+                     {
+                    "firstname":"Robert",
+                    "lastname":"Junior",
+                    "address":"England",
+                    "gender":"male"
+                    },
+                     {
+                    "firstname":"Ariana",
+                    "lastname":"Grande",
+                    "address":"Russia",
+                    "gender":"female"
+                    }
+                ];
+    </script>
+</head>
+<body>
+    <div id="content"></div>
+ <script>       
+        var abc,attrName,attrValue;
+        var out = "<form id='tabl'>";
+        for(var i=0;i<obj.length;i++)
+        {   
+            abc = obj[i];
+            for(key in abc)
+            {   out += "<div>"; 
+                attrName = key;
+                out+="<label>";
+                out+=attrName ;
+                out+="</label>";
+                out+="  :   ";
+                attrValue = abc[key];
+                out+=attrValue;
+                out+="</div>";    
+            }
+        }
+        out += "</form>";
+        document.getElementById("content").innerHTML = out;
+    </script>
+</body>
+</html>
